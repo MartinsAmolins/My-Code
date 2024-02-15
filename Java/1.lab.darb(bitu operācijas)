@@ -1,0 +1,26 @@
+// 231rdb293 Mārtiņš Amoliņš
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        System.out.println("231rdb293 Mārtiņš Amoliņš");
+        Scanner sc = new Scanner(System.in);
+        System.out.print("input number: ");
+        byte n = sc.nextByte();
+        sc.close();
+
+        int result = 0;
+        // TODO:
+        //  noteikt vieninieku skaitu skaitļa n binārā pierakstā
+        //  resultatu piešķirt mainīgam result
+
+       for(int i = 0; i < 8; i++){
+			    if ((n >> i & 1) != 0){
+                    result+=1;
+                }
+       }
+        System.out.println("result:");
+        System.out.println(result);
+    }
+}

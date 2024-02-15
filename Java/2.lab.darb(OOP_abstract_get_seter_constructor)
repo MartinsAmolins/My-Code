@@ -1,0 +1,51 @@
+ // 231rdb293 Mārtiņš Amoliņš
+
+ import java.util.Scanner;
+
+ // 231RDB293 Mārtiņš Amoliņš
+ 
+ abstract class Figura {
+ 
+     public abstract double getArea();
+     public abstract double getPerimeter();
+ }
+ class Rectangle extends Figura {
+   public double height;
+   public double width;
+ 
+   public Rectangle(double height, double width){
+       this.height = height;
+       this.width = width;
+   }
+   public double getArea(){
+       return height*width;
+   }
+ 
+   public double getPerimeter(){
+       return (width + height)*2;
+   }
+ }
+ 
+ 
+ public class Main {
+   public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+     int n = sc.nextInt();
+ 
+ 
+     Figura[] T = new Figura[n];
+ 
+     for(int i=0; i<n; i++){
+       double height = sc.nextDouble();
+       double width = sc.nextDouble();
+       T[i] = new Rectangle(height,width);
+     }
+ 
+     for(int i=0; i<n; i++){
+       System.out.printf("%.2f %.2f%n",T[i].getArea(),T[i].getPerimeter());
+     }
+        
+   
+     sc.close();
+   }
+ }
