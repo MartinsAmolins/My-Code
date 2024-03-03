@@ -38,20 +38,20 @@ def balancets(s):
     ######                            ######
     ######                            ######
     ########################################
-    for i, char in enumerate(s,start=1):
-        if char in brackets_map.values(): #check if value is corespodnign 
-            stack.push(char,i)
-        elif char in brackets_map.keys(): #check if the values is asigned index which is is the other value in this case is coresponding 
+    for i in range(0,len(s)):
+        if s[i] in brackets_map.values(): 
+            stack.push(s[i],i+1)
+        elif s[i] in brackets_map.keys():
             if stack.is_empty():
-                return i
+                return i+1
             else:
                 x = stack.pop()
-                if brackets_map[char] != x.value:
-                    return i
-        if not stack.is_empty():
-            return stack.top.position
-        else:
-            return "Success"
+                if brackets_map[s[i]] != x.value:
+                    return i+1
+    if not stack.is_empty():
+        return stack.top.position
+    else:
+        return "Success"
 
 s = input("Ievadiet rindu: ")
 print(balancets(s))
