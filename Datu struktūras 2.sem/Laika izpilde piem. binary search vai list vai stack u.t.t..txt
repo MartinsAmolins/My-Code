@@ -1,1 +1,72 @@
 
+Array
+A Data Structure in which a similar type of data is stored at contiguous memory locations is called an array. Array is the most frequently used linear data structure in computer science and due to its connectivity with the previous and next element, it became the inspiration for data structures like linked lists, queues, etc.  
+
+Time Complexity in arrays of size ‘N’:
+In an array, ‘ARR’ where the address of the first element is ‘A’ and the size of each element is ‘S’, ‘i’th element can be defined as 
+ARR[i] = A + (i - 1) * S
+Thus accessing an element at a specific memory address takes O(1) time, as its relative address can be calculated in constant time.
+Similarly editing any element of the array takes O(1) time.
+Inserting a new element at a particular index in arrays is only possible when we skip all the elements before that index, which takes O(N) time.
+Similarly, deletion operation also takes O(N) time.
+Searching operation in arrays takes O(N) time without any specific algorithm as we need to iterate and check every element in the array.
+Space Complexity in Arrays:
+As we do not need any extra space to perform all the operations mentioned above, the space complexity of fetching, over-writing, inserting, or deleting is constant i.e., O(1). Only the space taken to create the array is the auxiliary space.
+
+Also read: Recursion
+
+String
+A string is a data structure in computer science used to store the sequence of characters. Each character in the string consists of a specific index. Below is its time and space complexity.
+
+Time Complexity of String containing ‘N’ characters:
+Reading or editing any character stored at a particular index takes O(1) time, as similar to arrays, its relative index can also be calculated in constant time.
+Inserting and deleting any character at a particular index in strings takes O(N) time, as we need to skip all the characters at previous indices.
+Searching any character in strings takes O(N) time, as we check for every character present in the string.
+Space Complexity in Strings:
+As we do not need any extra space to perform all the operations mentioned above, the space complexity of reading, editing, inserting, or deleting is constant i.e., O(1). Only the space taken to create the string is the auxiliary space.
+
+Also see, Array in Javascript
+
+Queue
+A queue can be defined as a linear data structure, which is simply a collection of entries that are tracked in order, such that the addition of entries happens at one end of the queue, while the removal of entries takes place from the other end. Its order is also known as First In First Out (FIFO). 
+
+Time Complexity of the queue containing ‘N’ elements:
+To access or edit any element stored in a queue, the time taken is O(N) as to reach any specific element, all the elements after it has to be removed. 
+The searching operation also takes a total time of O(N), as reaching any specific element isn’t possible without popping the elements stored after it.
+Operations like insertion or deletion in a queue take constant time i.e., O(1). Only the front element can be removed at a time and insertion can only take place at the back.
+Space Complexity of the queue:
+Space complexity for each operation in a queue is O(1), as no extra space is required for any operation.
+
+ 
+
+Also see, Morris Traversal for Inorder, Application of Linked List , hash function in data structure
+
+Read about Application of Queue in Data Structure here.
+
+Stack
+A stack is a linear data structure, following a particular order in which operations can be performed. Its order is also known as LIFO(Last In First Out). Stacks are implemented using arrays and linked lists. Let us discuss its efficiency in terms of time and space complexity.
+
+Time Complexity of a Stack storing ‘N’ elements
+To access or edit any element stored in a stack, the time taken is O(N) as to reach any specific element, all the elements before it has to be removed. 
+The searching operation also takes a total time of O(N), as reaching any specific element isn’t possible without popping the elements stored before it.
+Operations like insertion or deletion in a stack take constant time i.e. O(1).
+Space Complexity of Stack
+Space complexity for each operation in a stack is O(1), as no extra space is required for any operation.
+
+Must Read Python List Operations And Application of Graph in Data Structure
+
+Linked List
+A linked list can be understood as a data structure that consists of nodes to store data. Each node consists of a data field and a pointer to the next node. The various elements in a linked list are linked together using pointers. In Linked List, unlike arrays, elements are not stored at contiguous memory locations but rather at different memory locations.
+
+Its efficiency can be understood with the below complexity analysis.
+
+
+Time Complexity of linked list storing ‘N’ elements
+For insertion in the linked list, the time complexity is O(1) if done on the head, O(N) if done at any other location, as we need to reach that location by traversing the linked list.
+
+For deletion, the time complexity is O(1), if done on the head, O(N), if done at any other location, as we need to reach that location by traversing the linked list.
+
+For searching and accessing any elements, the involved time complexity is O(N).
+
+Space Complexity of Linked List
+Space complexity for each operation in a linked list is O(1), as no extra space is required for any operation.
